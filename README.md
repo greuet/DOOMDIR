@@ -1,0 +1,2 @@
+# DOOMDIR
+Doom Emacs configuration
