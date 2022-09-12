@@ -80,3 +80,17 @@
 
 ;; keybinding to open/go to treemacs window
 (map! "C-c o o"  #'treemacs-select-window)
+
+;; dap-mode configuration
+(after! dap-mode
+  (dap-mode 1)
+
+  (dap-ui-mode 1)
+  ;; enables mouse hover support
+  (dap-tooltip-mode 1)
+  ;; use tooltips for mouse hover
+  ;; if it is not enabled `dap-mode' will use the minibuffer.
+  (tooltip-mode 1)
+  ;; displays floating panel with debug buttons
+  ;; requires emacs 26+
+  (dap-ui-controls-mode 1))
