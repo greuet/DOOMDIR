@@ -78,4 +78,5 @@
 (menu-bar-mode 1)
 (scroll-bar-mode 1)
 
+;; keybinding to open/go to treemacs window
 (map! "C-c o o"  #'treemacs-select-window)
