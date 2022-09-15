@@ -78,6 +78,18 @@
 (menu-bar-mode 1)
 (scroll-bar-mode 1)
 
+;; show current function in headline
+(which-function-mode)
+(setq mode-line-format (delete (assoc 'which-func-mode
+                                      mode-line-format) mode-line-format)
+      which-func-header-line-format '(which-func-mode ("" which-func-format)))
+(defadvice which-func-ff-hook (after header-line activate)
+  (when which-func-mode
+    (setq mode-line-format (delete (assoc 'which-func-mode
+                                          mode-line-format) mode-line-format)
+          header-line-format which-func-header-line-format)))
+
+
 ;; keybinding to open/go to treemacs window
 (map! "C-c o o"  #'treemacs-select-window)
 
