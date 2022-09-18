@@ -106,3 +106,6 @@
   ;; displays floating panel with debug buttons
   ;; requires emacs 26+
   (dap-ui-controls-mode 1))
+
+;; open treemacs at startup
+(add-hook 'window-setup-hook #'+treemacs/toggle 'append)
