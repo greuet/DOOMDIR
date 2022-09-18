@@ -98,6 +98,8 @@
 
 
 ;; dap-mode configuration
+(require 'dap-python)
+
 (after! dap-mode
   (dap-mode 1)
 
@@ -109,7 +111,9 @@
   (tooltip-mode 1)
   ;; displays floating panel with debug buttons
   ;; requires emacs 26+
-  (dap-ui-controls-mode 1))
+  (dap-ui-controls-mode 1)
+  ;; use debugpy for Python debug
+  (setq dap-python-debugger 'debugpy))
 
 ;; open treemacs at startup
 (add-hook 'window-setup-hook #'+treemacs/toggle 'append)
