@@ -93,6 +93,10 @@
 ;; keybinding to open/go to treemacs window
 (map! "C-c o o"  #'treemacs-select-window)
 
+;; keybinding to toggle vterm, in addition to "C-c o t"
+(map! "C-c t t" #'+vterm/toggle)
+
+
 ;; dap-mode configuration
 (after! dap-mode
   (dap-mode 1)
