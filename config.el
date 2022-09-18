@@ -109,3 +109,6 @@
 
 ;; open treemacs at startup
 (add-hook 'window-setup-hook #'+treemacs/toggle 'append)
+
+;; start maximized
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
